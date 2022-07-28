@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+  <body>
+    <!--
+███████╗██╗░░██╗░█████╗░██████╗░
+██╔════╝██║░░██║██╔══██╗██╔══██╗
+█████╗░░███████║███████║██████╦╝
+██╔══╝░░██╔══██║██╔══██║██╔══██╗
+███████╗██║░░██║██║░░██║██████╦╝
+╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░-->
+    <h1>X/O Game</h1>
+    <h3>Who Starts ?</h3>
+    <div class="choices">
+      <div class="x">
+        <input checked id="o" type="radio" value="o" name="start" />
+        <label for="o">O</label>
+      </div>
+      <div class="o">
+        <input id="x" type="radio" value="x" name="start" />
+        <label for="x">X</label>
+      </div>
+    </div>
+    <div class="squares">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+    <h3 class="winner"></h3>
+    <button>Start Over</button>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
