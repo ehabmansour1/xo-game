@@ -117,13 +117,26 @@ container.onclick = function () {
     }
   }
 };
+let colorPick = document.querySelector("[type='color']");
+let root = document.querySelector(":root");
 let reset = document.querySelector("button");
 reset.onclick = function () {
   for (let i = 0; i < squares.length; i++) {
     squares[i].innerHTML = "";
-    squares[i].style.backgroundColor = "#009688";
+    squares[i].style.backgroundColor = "--main-color";
   }
   radioO.removeAttribute("disabled");
   radioX.removeAttribute("disabled");
   done = false;
+  winner.innerHTML = "";
+};
+//grap color from local storage======================
+
+root.style.setProperty("--main-color", window.localStorage.getItem("color"));
+colorPick.value = window.localStorage.getItem("color");
+
+//change color ======================================
+colorPick.oninput = function () {
+  root.style.setProperty("--main-color", colorPick.value);
+  window.localStorage.setItem("color", colorPick.value);
 };
