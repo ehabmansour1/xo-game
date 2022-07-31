@@ -7,7 +7,7 @@ let winner = document.querySelector(".winner");
 radioX.oninput = function () {
   if (radioO.checked) {
     start = true;
-  } else {
+  } else if (radioX.checked){
     start = false;
   }
 };
