@@ -123,7 +123,7 @@ let reset = document.querySelector("button");
 reset.onclick = function () {
   for (let i = 0; i < squares.length; i++) {
     squares[i].innerHTML = "";
-    squares[i].style.backgroundColor = "--main-color";
+    squares[i].style.backgroundColor = "var(--main-color)";
   }
   radioO.removeAttribute("disabled");
   radioX.removeAttribute("disabled");
